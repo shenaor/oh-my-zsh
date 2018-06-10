@@ -7,15 +7,16 @@ autoload -U add-zsh-hook
 
 USER_NAME_COLOR=$FG[087]
 PROMPT_SUCCESS_COLOR=$FG[087]
+PROMPT_SUCCESS_COLOR=$FG[255]
 PROMPT_FAILURE_COLOR=$FG[124]
 PROMPT_VCS_INFO_COLOR=$FG[242]
 PROMPT_PROMPT=$FG[172]
 GIT_DIRTY_COLOR=$FG[163]
 GIT_CLEAN_COLOR=$FG[118]
 GIT_PROMPT_INFO=$FG[226]
-  
 #PROMPT='%{$reset_color%}%{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}%{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$reset_color%} '
 PROMPT='%{$reset_color%}%{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}%{$reset_color%} '
+PROMPT='%{$PROMPT_PROMPT%}✈%{$reset_color%} %{$USER_NAME_COLOR%}%n %{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%}/%{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status)%{$reset_color%} '
 
 RPS1="${return_code}"
 
